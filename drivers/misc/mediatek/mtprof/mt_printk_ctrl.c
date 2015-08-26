@@ -15,6 +15,20 @@
 #include <linux/stacktrace.h>
 
 #include <linux/printk.h>
+#include <linux/time_log.h>
+
+extern int mt_need_uart_console;
+inline void mt_enable_uart(void)
+{
+    if (mt_need_uart_console == 1) {
+        if (printk_disable_uart == 0)
+            return;
+        printk_disable_uart = 0;
+        printk("<< printk console enable >>\n");
+    } else {
+        printk("<< printk console can't be enabled >>\n");
+    }
+}
 
 /* Some utility macro*/
 #define SEQ_printf(m, x...)	    \

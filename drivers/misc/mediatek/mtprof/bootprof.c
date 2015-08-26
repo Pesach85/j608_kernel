@@ -5,6 +5,7 @@
 #include <linux/utsname.h>
 #include <linux/module.h>
 #include <linux/moduleparam.h>
+#include <linux/time_log.h>
 #include <asm/uaccess.h>
 
 #define SEQ_printf(m, x...)	    \
@@ -36,6 +37,17 @@ static const struct file_operations mt_##name##_fops = { \
 #else
 #define BOOT_LOG_NUM 48
 #endif
+
+extern int mt_need_uart_console;
+inline void mt_disable_uart(void)
+{
+    if (mt_need_uart_console == 0) {
+        printk("<< printk console disable >>\n");
+        printk_disable_uart = 1;
+    } else {
+        printk("<< printk console can't be disabled >>\n");
+    }
+}
 
 struct boot_log_struct {
 	u64 timestamp;
