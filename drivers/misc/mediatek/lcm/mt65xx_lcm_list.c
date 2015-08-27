@@ -193,7 +193,7 @@ extern LCM_DRIVER hx8379c_dsi_vdo_azet_wvga_ips_lcm_drv;//sym add in 20140725
 extern LCM_DRIVER ili9806e_dsi_vdo_hlt_fwvga_ips_d5020_lcm_drv;
 extern LCM_DRIVER hx8379c_dsi_vdo_trust_fwvga_ips_lcm_drv;
 extern LCM_DRIVER hx8394d_dsi_vdo_djn_boe_hd720_ips_lcm_drv;
-extern LCM_DRIVER TPG110_lcm_drv;
+extern LCM_DRIVER tpg110_lcm_drv;
 
 LCM_DRIVER* lcm_driver_list[] = 
 { 
@@ -879,7 +879,7 @@ LCM_DRIVER* lcm_driver_list[] =
 #endif
 
 #if defined(TPG110)
-	&TPG110_lcm_drv,
+	&tpg110_lcm_drv,
 #endif
 
 };
