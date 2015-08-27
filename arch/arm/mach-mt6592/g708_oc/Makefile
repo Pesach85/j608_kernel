@@ -17,6 +17,7 @@ obj-y   +=  flashlight/constant_flashlight/
 obj-y	+=  vibrator/
 obj-y	+=  leds/
 obj-y	+=  keypad/
+obj-y	+=  multibridge/va7783/
 obj-y	+=  sound/
 obj-y	+=  accdet/
 
