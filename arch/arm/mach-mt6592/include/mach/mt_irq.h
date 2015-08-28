@@ -1,6 +1,8 @@
 #ifndef __MT_IRQ_H
 #define __MT_IRQ_H
 
+#define MT6582_DISP_DSI_IRQ_ID (GIC_PRIVATE_SIGNALS+157) 
+
 #define NR_GIC_SGI              (16)
 #define NR_GIC_PPI              (16)
 #define GIC_PPI_OFFSET          (27)

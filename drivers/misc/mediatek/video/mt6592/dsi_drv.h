@@ -165,11 +165,14 @@ DSI_STATUS DSI_WaitForNotBusy(void);
 
 DSI_STATUS DSI_StartTransfer(bool isMutexLocked);
 
+unsigned int DSI_Detect_CLK_Glitch(void);
+
 DSI_STATUS DSI_Config_VDO_FRM_Mode(void);
 
 DSI_STATUS DSI_EnableClk(void);
 DSI_STATUS DSI_DisableClk(void);
 DSI_STATUS DSI_Reset(void);
+DSI_STATUS DSI_LP_Reset(void);
 DSI_STATUS DSI_SetMode(unsigned int mode);
 void DSI_WaitTE(void);
 void DSI_InitVSYNC(unsigned int vsync_interval);
