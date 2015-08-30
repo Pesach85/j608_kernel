@@ -1,3 +1,4 @@
 include $(srctree)/drivers/misc/mediatek/Makefile.custom
 
-obj-y	:=  bmm056.o
+obj-y	:=  cust_mag.o
+

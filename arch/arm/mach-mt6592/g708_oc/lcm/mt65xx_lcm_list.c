@@ -141,7 +141,6 @@ extern LCM_DRIVER r69429_wuxga_dsi_cmd_lcm_drv;
 extern LCM_DRIVER rm68210_hd720_dsi_ufoe_cmd_lcm_drv;
 extern LCM_DRIVER r63311_fhd_dsi_vedio_lcm_drv;
 extern LCM_DRIVER lvds_wsvga_mt8193_lcm_drv;
-extern LCM_DRIVER TPG110_lcm_drv;
 LCM_DRIVER* lcm_driver_list[] = 
 { 
 #if defined(R63311_FHD_DSI_VDO)
@@ -620,10 +619,6 @@ LCM_DRIVER* lcm_driver_list[] =
 
 #if defined(LVDS_WSVGA_MT8193)
 	&lvds_wsvga_mt8193_lcm_drv,
-
-#if defined(TPG110)
-	&TPG110_lcm_drv,
-#endif
 #endif
 };
 
